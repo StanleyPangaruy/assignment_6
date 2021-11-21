@@ -22,26 +22,26 @@ def isFloat(n):
         return True
 
 #function for getting the user number input and identifies its type
-def getNumber():
-    num1 = input('1st number: ')
+def getNumbers():
+    num1 = input('Enter 1st number: ')
     if isInt(num1):
         num1 = int(num1)
     else:
         if isFloat(num1):
             num1 = float(num1)
-    num2 = input('2nd number: ')
+    num2 = input('Enter 2nd number: ')
     if isInt(num2):
         num2 = int(num2)
     else:
         if isFloat(num2):
             num2 = float(num2)
-    num3 = input('3rd number: ')
+    num3 = input('Enter 3rd number: ')
     if isInt(num3):
         num3 = int(num3)
     else:
         if isFloat(num3):
             num3 = float(num3)
-    num4 = input('4th number: ')
+    num4 = input('Enter 4th number: ')
     if isInt(num4):
         num4 = int(num4)
     else:
@@ -50,84 +50,73 @@ def getNumber():
     return num1, num2, num3, num4
 
 
-def numSort(a,b,c,d):
-    high = max(a,b,c,d) #returns an item with the highest value
-    low = min(a,b,c,d) #returns an item with the lowest value
-    if high == a:
-        if low == d:
-            if b > c:
-                print(a,b,c,d)
+def numSort(n1,n2,n3,n4):
+    high = max(n1,n2,n3,n4) #returns an item with the highest value
+    low = min(n1,n2,n3,n4) #returns an item with the lowest value
+    if high == n1:
+        if low == n4:
+            if n2 > n3:
+                print(f'In descending order: {n1}, {n2}, {n3}, {n4}')
             else:
-                print(a,c,b,d)
-        elif low == b:
-            if c > d:
-                print(a,c,d,b)
+                print(f'In descending order: {n1} ,{n3} ,{n2}, {n4}')
+        elif low == n2:
+            if n3 > n4:
+                print(f'In descending order: {n1}, {n3}, {n4}, {n2}')
             else:
-                print(a,d,c,b)
+                print(f'In descending order: {n1}, {n4}, {n3}, {n2}')
         else:
-            if b > d:
-                print(a,b,d,c)
+            if n2 > n4:
+                print(f'In descending order: {n1}, {n2}, {n4}, {n3}')
             else:
-                print(a,d,b,c)
-    elif high == b:
-        if low == d:
-            if a > c:
-                print(b,a,c,d)
+                print(f'In descending order: {n1}, {n4}, {n2}, {n3}')
+    elif high == n2:
+        if low == n4:
+            if n1 > n3:
+                print(f'In descending order: {n2}, {n1}, {n3}, {n4}')
             else:
-                print(b,c,a,d)
-        elif low == c:
-            if d > a:
-                print(b,d,a,c)
+                print(f'In descending order: {n2}, {n3}, {n1}, {n4}')
+        elif low == n3:
+            if n4 > n1:
+                print(f'In descending order: {n2}, {n4}, {n1}, {n3}')
             else:
-                print(b,a,d,c)
+                print(f'In descending order: {n2}, {n1}, {n4}, {n3}')
         else:
-            if d > c:
-                print(b,d,c,a)
+            if n4 > n3:
+                print(f'In descending order: {n2}, {n4}, {n3}, {n1}')
             else:
-                print(b,c,d,a)
-    elif high == c:
-        if low == d:
-            if a > b:
-                print(c,a,b,d)
+                print(f'In descending order: {n2}, {n3}, {n4}, {n1}')
+    elif high == n3:
+        if low == n4:
+            if n1 > n2:
+                print(f'In descending order: {n3}, {n1}, {n2}, {n4}')
             else:
-                print(c,b,a,d)
-        elif low == a:
-            if d > b:
-                print(c,d,b,a)
+                print(f'In descending order: {n3}, {n2}, {n1}, {n4}')
+        elif low == n1:
+            if n4 > n2:
+                print(f'In descending order: {n3}, {n4}, {n2}, {n1}')
             else:
-                print(c,b,d,a)
+                print(f'In descending order: {n3}, {n2}, {n4}, {n1}')
         else:
-            if d > a:
-                print(c,d,a,b)
+            if n4 > n1:
+                print(f'In descending order: {n3}, {n4}, {n1}, {n2}')
             else:
-                print(c,a,d,b)
+                print(f'In descending order: {n3}, {n1}, {n4}, {n2}')
     else:
-        if low == a:
-            if c > b:
-                print(d,c,b,a)
+        if low == n1:
+            if n3 > n2:
+                print(f'In descending order: {n4}, {n3}, {n2}, {n1}')
             else:
-                print(d,b,c,a)
-        elif low == b:
-            if c > a:
-                print(d,c,a,b)
+                print(f'In descending order: {n4}, {n2}, {n3}, {n1}')
+        elif low == n2:
+            if n3 > n1:
+                print(f'In descending order: {n4}, {n3}, {n1}, {n2}')
             else:
-                print(d,a,c,b)
+                print(f'In descending order: {n4}, {n1}, {n3}, {n2}')
         else:
-            if b > a:
-                print(d,b,a,c)
+            if n2 > n1:
+                print(f'In descending order: {n4}, {n2}, {n1}, {n3}')
             else: 
-                print(d,a,b,c)
+                print(f'In descending order: {n4}, {n1}, {n2}, {n3}')
 
-x,y,z,s = getNumber()
-numSort(x,y,z,s)
-    
-
-
-
-
-
-
-
-
-
-
+nOne,nTwo,nThree,nFour = getNumbers()
+numSort(nOne,nTwo,nThree,nFour)
