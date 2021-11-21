@@ -4,19 +4,34 @@
 # The program will ask the user 10 addition operation
 # Display the result summary of the 10 operations (ex 9/10)
 
-import random
-def questions():
-    number1 = random.randint(0,99)
-    number2 = random.randint(0,99)
-    total = number1 + number2
-    answer = int(input(f'1. {number1} + {number2} = '))
-    if answer == total:
-        print('Damn Youre good at this')
-    else:
-        print("so bad omegalul")
+#imports the specific method from a module
+from random import randint
+from operator import add
 
-for i in range(10):
-    questions()
+def add_quiz():
+    #starting score    
+    score = 0 
+    item = 0
+    #loops the code block
+    for item in range(10):
+        # gives random number from 0 to 99
+        num1 = randint(0,99)
+        num2 = randint(0,99)
+        # the system adds the two randomly generated numbers
+        sysAnswer = add(num1,num2)
+        # asks for the user's input on the addition expression.
+        userAnswer = int(input(f'{num1} + {num2} = '))
+        if sysAnswer == userAnswer:
+            print('Correct')
+            score = score + 1
+            item = item + 1
+        else:
+            print(f'Incorrect, Correct answer is {sysAnswer}')
+            item = item + 1
+        #if the number of items reaches 10, it ends the loop and prints the result summary.
+        if item == 10: 
+            print(f"Your final score is {score} out of 10.")    
 
-#ten questions
-#random functions call multiple times to create a new number. know the how many answers were right.
+add_quiz()
+
+
